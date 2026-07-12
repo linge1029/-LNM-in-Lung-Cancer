@@ -26,8 +26,8 @@ FEATURE_CONFIG = {
 # ==================== 模型加载 ====================
 @st.cache_resource
 def load_model():
-    #model_path = Path("best_catboost_model.pkl")
-    model_path = Path(r"E:\lc-chengxu\ling\best_catboost_model.pkl") # 本地试验时: 
+    model_path = Path("best_catboost_model.pkl")
+    #model_path = Path(r"E:\lc-chengxu\ling\best_catboost_model.pkl") # 本地试验时: 
     model = joblib.load(model_path)
     
     try:
