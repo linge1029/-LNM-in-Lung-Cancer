@@ -48,7 +48,7 @@ def collect_input():
         val = st.number_input(
             "",
             value=0.0,
-            format="%.4f",
+            format="%.2f",  # ← 改为 2 位小数
             key=feat,
             label_visibility="collapsed"
         )
@@ -79,7 +79,7 @@ def plot_force_only(explainer, input_df, model, prob):
     for feat in input_df.columns:
         val = input_df[feat].iloc[0]
         display_name = FEATURE_CONFIG[feat]['display']
-        feature_names.append(f"{display_name}: {val:.4f}")
+        feature_names.append(f"{display_name}: {val:.2f}")  # ← 改为 2 位小数
 
     plt.figure(figsize=(24, 12), dpi=120)
     shap.force_plot(
@@ -100,7 +100,7 @@ def plot_force_only(explainer, input_df, model, prob):
     prob_labels = []
     for t in ticks:
         if -25 < t < 25:
-            prob_labels.append(f"{expit(t):.2f}")
+            prob_labels.append(f"{expit(t):.2f}")  # ← 改为 2 位小数
         else:
             prob_labels.append("")
     ax.set_xticklabels(prob_labels, fontsize=10)
@@ -117,7 +117,7 @@ def plot_force_only(explainer, input_df, model, prob):
             try:
                 val = float(txt.strip())
                 if abs(val - final_margin) < 0.05:
-                    text.set_text(f"{prob:.3f}")
+                    text.set_text(f"{prob:.2f}")  # ← 改为 2 位小数
                     x, y = text.get_position()
                     text.set_y(y - 0.04)
             except ValueError:
