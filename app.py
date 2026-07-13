@@ -12,15 +12,15 @@ import re
 # key: 模型中的变量名, display: 页面展示名称
 FEATURE_CONFIG = {
     'zj':       {'display': 'Tumor size'},
-    'CYFRA21-1': {'display': 'CYFRA21-1'},
-    'CA125':    {'display': 'CA125'},
-    'NLR':      {'display': 'NLR'},
-    'CTR':      {'display': 'CTR'},
-    'LMR':      {'display': 'LMR'},
-    'PT':       {'display': 'PT'},
-    'PLR':      {'display': 'PLR'},
-    'MO':       {'display': 'Mo'},
-    'NSE':      {'display': 'NSE'}
+    'CYFRA21-1': {'display': 'Cytokeratin 19 fragment 21-1 (CYFRA21-1)'},
+    'CA125':    {'display': 'Cancer antigen 125 (CA125)'},
+    'NLR':      {'display': 'Neutrophil to Lymphocyte Ratio(NLR)'},
+    'CTR':      {'display': 'Consolidation to Tumor Ratio(CTR)'},
+    'LMR':      {'display': 'Lymphocyte to Monocyte Ratio(LMR)'},
+    'PT':       {'display': 'Prothrombin Time(PT)'},
+    'PLR':      {'display': 'Platelet to Lymphocyte Ratio(PLR)'},
+    'MO':       {'display': 'Monocytes(Mo)'},
+    'NSE':      {'display': 'Neuron-Specific Enolase (NSE)'}
 }
 
 # ==================== 模型加载 ====================
